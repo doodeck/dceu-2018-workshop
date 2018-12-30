@@ -1,12 +1,12 @@
-version: "3.7"
+version: "3.4"
 
 services: 
   app:
-    image: php:7-apache
     ports:
       - 80:80
     volumes:
       - ./src:/var/www/html
+    build: ./
   mysql:
     image: mysql:5.7
     environment:

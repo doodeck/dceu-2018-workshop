@@ -1,6 +1,7 @@
 <?php
 
-$DB_HOST = 'localhost';
+$DB_HOST = 'mysql';
+#  172.18.0.3
 $DB_USER = 'root';
 $DB_PASSWORD = 'secret';
 $DB_NAME = 'workshop';
@@ -13,3 +14,5 @@ $sql = "SELECT LOCALTIMESTAMP() as time FROM DUAL";
 $row = $conn->query($sql)->fetch_assoc();
 echo $row['time'];
 $conn->close();
+
+print_r(scandir('/var/www/html'));
